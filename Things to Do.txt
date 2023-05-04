@@ -1,0 +1,18 @@
+Male and Female
+- Face Sets, with Blendshapes later... (DONE)
+- Clothes -> There are two style of clothing base
+- Hairstyle -> Mesh data is hidden in Skinned Mesh Renderer
+- Shoes (DONE)
+- Skin Tone
+
+
+
+Clothes are rather hard to do because we can't change the mesh of the model. Every clothes model in VRoid its own model.
+Sometimes it can work, other times, it won't.
+
+My recommendation is to have a set of model for every type of clothes, with texture variants like what I set up here.
+
+
+
+
+For hair it's even more complicated
