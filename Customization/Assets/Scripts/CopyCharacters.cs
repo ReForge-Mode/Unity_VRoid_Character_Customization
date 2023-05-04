@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class CopyCharacters : MonoBehaviour
+public class CopyMaterials : MonoBehaviour
 {
     [HideInInspector] public GameObject sourceModel;
     public GameObject targetModel;
 
-    public void CopyFace()
+    public void CopyFaceMaterial()
     {
-        //Get the materials
-        SkinnedMeshRenderer sourceMesh = sourceModel.transform.Find("Face").GetComponent<SkinnedMeshRenderer>();
-        SkinnedMeshRenderer targetMesh = targetModel.transform.Find("Face").GetComponent<SkinnedMeshRenderer>();
+        //Get the materials from the character's Face
+        Transform sourceFace = sourceModel.transform.Find("Face");
+        Transform targetFace = targetModel.transform.Find("Face");
+        SkinnedMeshRenderer sourceMesh = sourceFace.GetComponent<SkinnedMeshRenderer>();
+        SkinnedMeshRenderer targetMesh = targetFace.GetComponent<SkinnedMeshRenderer>();
         Material[] sourceMaterials = sourceMesh.sharedMaterials;
         Material[] targetMaterials = targetMesh.sharedMaterials;
 
@@ -35,7 +37,8 @@ public class CopyCharacters : MonoBehaviour
                 for (int j = 0; j < sourceMaterials.Length; j++)
                 {
                     //It's important to skip the first F/M letter in the material name
-                    if (targetMaterials[i].name.Substring(11) == sourceMaterials[j].name.Substring(11))
+                    if (targetMaterials[i].name.Substring(11) ==
+                        sourceMaterials[j].name.Substring(11))
                     {
                         targetMaterials[i] = sourceMaterials[j];
                         break;
@@ -52,11 +55,13 @@ public class CopyCharacters : MonoBehaviour
         targetMesh.materials = targetMaterials;
     }
 
-    public void CopyEyes()
+    public void CopyEyesMaterial()
     {
         //Get the materials
-        SkinnedMeshRenderer sourceMesh = sourceModel.transform.Find("Face").GetComponent<SkinnedMeshRenderer>();
-        SkinnedMeshRenderer targetMesh = targetModel.transform.Find("Face").GetComponent<SkinnedMeshRenderer>();
+        Transform sourceFace = sourceModel.transform.Find("Face");
+        Transform targetFace = targetModel.transform.Find("Face");
+        SkinnedMeshRenderer sourceMesh = sourceFace.GetComponent<SkinnedMeshRenderer>();
+        SkinnedMeshRenderer targetMesh = targetFace.GetComponent<SkinnedMeshRenderer>();
         Material[] sourceMaterials = sourceMesh.sharedMaterials;
         Material[] targetMaterials = targetMesh.sharedMaterials;
 
@@ -79,7 +84,8 @@ public class CopyCharacters : MonoBehaviour
                 for (int j = 0; j < sourceMaterials.Length; j++)
                 {
                     //It's important to skip the first F/M letter in the material name
-                    if (targetMaterials[i].name.Substring(11) == sourceMaterials[j].name.Substring(11))
+                    if (targetMaterials[i].name.Substring(11) ==
+                        sourceMaterials[j].name.Substring(11))
                     {
                         targetMaterials[i] = sourceMaterials[j];
                         break;
@@ -96,11 +102,13 @@ public class CopyCharacters : MonoBehaviour
         targetMesh.materials = targetMaterials;
     }
 
-    public void CopyBody()
+    public void CopyBodySkinMaterial()
     {
         //Get the materials
-        SkinnedMeshRenderer sourceMesh = sourceModel.transform.Find("Body").GetComponent<SkinnedMeshRenderer>();
-        SkinnedMeshRenderer targetMesh = targetModel.transform.Find("Body").GetComponent<SkinnedMeshRenderer>();
+        Transform sourceFace = sourceModel.transform.Find("Body");
+        Transform targetFace = targetModel.transform.Find("Body");
+        SkinnedMeshRenderer sourceMesh = sourceFace.GetComponent<SkinnedMeshRenderer>();
+        SkinnedMeshRenderer targetMesh = targetFace.GetComponent<SkinnedMeshRenderer>();
         Material[] sourceMaterials = sourceMesh.sharedMaterials;
         Material[] targetMaterials = targetMesh.sharedMaterials;
 
@@ -118,7 +126,8 @@ public class CopyCharacters : MonoBehaviour
                 for (int j = 0; j < sourceMaterials.Length; j++)
                 {
                     //It's important to skip the first F/M letter in the material name
-                    if (targetMaterials[i].name.Substring(11) == sourceMaterials[j].name.Substring(11))
+                    if (targetMaterials[i].name.Substring(11) ==
+                        sourceMaterials[j].name.Substring(11))
                     {
                         targetMaterials[i] = sourceMaterials[j];
                         break;
@@ -135,11 +144,13 @@ public class CopyCharacters : MonoBehaviour
         targetMesh.materials = targetMaterials;
     }
 
-    public void CopyClothes()
+    public void CopyClothesMaterial()
     {
         //Get the materials
-        SkinnedMeshRenderer sourceMesh = sourceModel.transform.Find("Body").GetComponent<SkinnedMeshRenderer>();
-        SkinnedMeshRenderer targetMesh = targetModel.transform.Find("Body").GetComponent<SkinnedMeshRenderer>();
+        Transform sourceFace = sourceModel.transform.Find("Body");
+        Transform targetFace = targetModel.transform.Find("Body");
+        SkinnedMeshRenderer sourceMesh = sourceFace.GetComponent<SkinnedMeshRenderer>();
+        SkinnedMeshRenderer targetMesh = targetFace.GetComponent<SkinnedMeshRenderer>();
         Material[] sourceMaterials = sourceMesh.sharedMaterials;
         Material[] targetMaterials = targetMesh.sharedMaterials;
 
@@ -179,24 +190,5 @@ public class CopyCharacters : MonoBehaviour
 
         //Set the new List as materials
         targetMesh.materials = targetMaterials;
-    }
-
-    public void CopyHair()
-    {
-        //Also do hairback swap
-
-        //Get the materials
-        //Of course, if you have multiple hair object, this needs to be modified
-        SkinnedMeshRenderer sourceMesh = sourceModel.transform.Find("Hairs").Find("Hair001").GetComponent<SkinnedMeshRenderer>();
-        SkinnedMeshRenderer targetMesh = targetModel.transform.Find("Hairs").Find("Hair001").GetComponent<SkinnedMeshRenderer>();
-
-        //Copy Mesh
-        targetMesh.sharedMesh = sourceMesh.sharedMesh;
-
-        //Copy Bounds
-        targetMesh.bounds = sourceMesh.bounds;
-
-        //Copy materials
-        targetMesh.materials = sourceMesh.sharedMaterials;
     }
 }

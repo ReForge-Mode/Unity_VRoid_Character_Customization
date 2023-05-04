@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIShowModel : MonoBehaviour
+public class ShowModel : MonoBehaviour
 {
-    public CopyCharacters copyCharacters;
+    public CopyMaterials copyMaterials;
+
+    [Header("List of Models")]
     public GameObject modelDress;
     public GameObject modelHoodie;
     public GameObject modelHoodie2;
@@ -18,7 +20,7 @@ public class UIShowModel : MonoBehaviour
         modelHoodie2.SetActive(false);
         modelUniform.SetActive(false);
         modelUniform2.SetActive(false);
-        copyCharacters.targetModel = modelDress;
+        copyMaterials.targetModel = modelDress;
     }
 
     public void ShowModelHoodie()
@@ -28,7 +30,7 @@ public class UIShowModel : MonoBehaviour
         modelHoodie2.SetActive(false);
         modelUniform.SetActive(false);
         modelUniform2.SetActive(false);
-        copyCharacters.targetModel = modelHoodie;
+        copyMaterials.targetModel = modelHoodie;
     }
 
     public void ShowModel2Hoodie()
@@ -38,7 +40,7 @@ public class UIShowModel : MonoBehaviour
         modelHoodie2.SetActive(true);
         modelUniform.SetActive(false);
         modelUniform2.SetActive(false);
-        copyCharacters.targetModel = modelHoodie2;
+        copyMaterials.targetModel = modelHoodie2;
     }
 
     public void ShowModelUniform()
@@ -48,7 +50,7 @@ public class UIShowModel : MonoBehaviour
         modelHoodie2.SetActive(false);
         modelUniform.SetActive(true);
         modelUniform2.SetActive(false);
-        copyCharacters.targetModel = modelUniform;
+        copyMaterials.targetModel = modelUniform;
     }
 
     public void ShowModelUniform2()
@@ -58,6 +60,6 @@ public class UIShowModel : MonoBehaviour
         modelHoodie2.SetActive(false);
         modelUniform.SetActive(false);
         modelUniform2.SetActive(true);
-        copyCharacters.targetModel = modelUniform2;
+        copyMaterials.targetModel = modelUniform2;
     }
 }
