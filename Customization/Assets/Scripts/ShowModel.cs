@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is the script used to show or hide models when you click on the model number UI.
+/// </summary>
 public class ShowModel : MonoBehaviour
 {
     public CopyMaterials copyMaterials;
@@ -15,51 +18,46 @@ public class ShowModel : MonoBehaviour
 
     public void ShowModelDress()
     {
+        HideAllModel();
         modelDress.SetActive(true);
-        modelHoodie.SetActive(false);
-        modelHoodie2.SetActive(false);
-        modelUniform.SetActive(false);
-        modelUniform2.SetActive(false);
         copyMaterials.targetModel = modelDress;
     }
 
     public void ShowModelHoodie()
     {
-        modelDress.SetActive(false);
+        HideAllModel();
         modelHoodie.SetActive(true);
-        modelHoodie2.SetActive(false);
-        modelUniform.SetActive(false);
-        modelUniform2.SetActive(false);
         copyMaterials.targetModel = modelHoodie;
     }
 
     public void ShowModel2Hoodie()
     {
-        modelDress.SetActive(false);
-        modelHoodie.SetActive(false);
+        HideAllModel();
         modelHoodie2.SetActive(true);
-        modelUniform.SetActive(false);
-        modelUniform2.SetActive(false);
         copyMaterials.targetModel = modelHoodie2;
     }
 
     public void ShowModelUniform()
     {
-        modelDress.SetActive(false);
-        modelHoodie.SetActive(false);
-        modelHoodie2.SetActive(false);
+        HideAllModel();
         modelUniform.SetActive(true);
-        modelUniform2.SetActive(false);
         copyMaterials.targetModel = modelUniform;
     }
 
     public void ShowModelUniform2()
     {
+        HideAllModel();
+        modelUniform2.SetActive(true);
+        copyMaterials.targetModel = modelUniform2;
+    }
+
+
+    public void HideAllModel()
+    {
         modelDress.SetActive(false);
         modelHoodie.SetActive(false);
         modelHoodie2.SetActive(false);
         modelUniform.SetActive(false);
-        modelUniform2.SetActive(true);
-        copyMaterials.targetModel = modelUniform2;
+        modelUniform2.SetActive(false);
     }
 }

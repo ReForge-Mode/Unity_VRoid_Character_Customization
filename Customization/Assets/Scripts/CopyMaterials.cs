@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// This is the main script for swapping materials!
+/// Replace the materials on the target model with the material of the source model
+/// The Source model refers to the premade models from VRoid
+/// The Target model refers to the customizable model
+/// You can find this as a component on Copy Materials gameobject
+/// </summary>
 public class CopyMaterials : MonoBehaviour
 {
     [HideInInspector] public GameObject sourceModel;
