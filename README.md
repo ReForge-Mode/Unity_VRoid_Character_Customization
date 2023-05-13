@@ -15,3 +15,8 @@ Here are the video tutorial for the process and the unofficial documentation.
 
 # Instructions
 Once you download and extract the zip file or clone the project to your Git application, open it in Unity Hub. This project uses Unity version 2022.2.15f1, earlier versions of Unity might not work, and later versions might break some of the scripts. To download a specific version of Unity, go to this website https://unity3d.com/get-unity/download/archive. After you download and install the Unity version, you can add this version of Unity back to Unity Hub and open it.
+
+<b>For the Missing Prefab Error</b>
+You need to reimport every VRM files in the project so Unity can recognize it. It only takes a minute. Here's how:
+
+[![Thumbnail!](https://github.com/FFaUniHan/Unity_VRoid_Character_Customization/blob/main/Video2.jpg)](https://youtu.be/-jC4NamKS0M "VRoid Missing Prefabs Problem? Here's a quick fix!")
