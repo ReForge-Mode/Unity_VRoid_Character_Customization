@@ -1,3 +1,12 @@
+<b>UPDATE: I was just informed that this may be against VRoid terms of service (https://vroid.com/en/studio/guidelines)</b>
+
+> "You cannot use VRoid Studio to create an application that can deform meshes and/or can create 3D models like avatars and items by combining meshes and/or textures."
+
+Proceed at your own risk. I'm giving this knowledge for education purposes. What you do with this information is up to you.
+
+
+
+
 # VRoid Character Customization in Unity
 A lot of people has been asking for character customization of VRoid models in Unity. Here's how you do it!
 
