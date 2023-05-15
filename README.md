@@ -34,4 +34,4 @@ So, I guess it's okay as long as you use it internally inside your game.
 
 Here's the screenshot of my communication with VRoid team. On a side note, I am impressed they reply without hours. Bravo!
 
-<p align="center"><img src="https://github.com/FFaUniHan/Unity_VRoid_Character_Customization/blob/main/Email.gif" width=60% height=60%></p>
+<p align="center"><img src="https://github.com/FFaUniHan/Unity_VRoid_Character_Customization/blob/main/Email.jpg" width=100% height=100%></p>
