@@ -1,8 +1,17 @@
-<b>UPDATE: I was just informed that this may be against VRoid terms of service (https://vroid.com/en/studio/guidelines)</b>
+# VRoid Guideline Issue
+I was recently informed that this customization system may be against VRoid terms of service (https://vroid.com/en/studio/guidelines)</b>
 
 > "You cannot use VRoid Studio to create an application that can deform meshes and/or can create 3D models like avatars and items by combining meshes and/or textures."
 
-Proceed at your own risk. I'm giving this knowledge for education purposes. What you do with this information is up to you.
+
+
+
+
+So I messaged VRoid team and got an email back from VRoid:
+
+"If the application does not have an export function, it is not considered to have a function for creating avatars, items, or other 3D models"
+
+So, it's okay as long as you use it internally inside your game.
 
 
 
